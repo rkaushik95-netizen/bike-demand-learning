@@ -6,7 +6,7 @@ Question: should an operations team plan around one average rental pattern, or s
 
 This is a descriptive study of Capital Bikeshare's 2011-2012 hourly and daily records. It is not current demand, a station-level staffing plan, or a prediction model. The files and findings are real; no workplace results or unaided coding claims are made.
 
-![Hourly demand](hourly-demand.png)
+![Hourly demand](hourly-demand.svg)
 
 ## Findings
 
@@ -26,7 +26,7 @@ python -m pip install -r requirements.txt
 python analyze.py
 ```
 
-The original CSVs are included in this repository. The script regenerates the chart, aggregate CSVs and `outputs/results.json`. It checks row counts, unique date/ID keys, no nulls, `casual + registered = cnt`, and each day's hourly totals against `day.csv`. Output SHA256 hashes record the exact raw CSV inputs. Change the data only if the checks and source notes are updated.
+The script downloads the original CSVs from the official UCI source on its first run. The script regenerates the chart, aggregate CSVs and `outputs/results.json`. It checks row counts, unique date/ID keys, no nulls, `casual + registered = cnt`, and each day's hourly totals against `day.csv`. Output SHA256 hashes record the exact raw CSV inputs. Change the data only if the checks and source notes are updated.
 
 ## Method and limits
 
@@ -36,7 +36,7 @@ Weather averages are exported for exploration, not presented as causal effects. 
 
 ## Attribution
 
-Hadi Fanaee-T, *Bike Sharing*, UCI Machine Learning Repository, DOI 10.24432/C5W894. Source page lists CC BY 4.0. Analysis and charts are new transformations; original data and supplied Readme.txt are unchanged.
+Hadi Fanaee-T, *Bike Sharing*, UCI Machine Learning Repository, DOI 10.24432/C5W894. Source page lists CC BY 4.0. Analysis and charts are new transformations; original source CSVs are unchanged after download.
 
 - Dataset and license: https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset
 - Exact download: https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip
